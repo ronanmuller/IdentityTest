@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<UserSecretsId>b543be42-f7ab-48b6-b633-72d6fb529fb7</UserSecretsId>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>..\..</DockerfileContext>
+	</PropertyGroup>
+	<ItemGroup>
+	  <PackageReference Include="NetDevPack" Version="6.1.0" />
+	  <PackageReference Include="NetDevPack.Identity" Version="7.0.1" />
+	  <PackageReference Include="NetDevPack.Security.Jwt.AspNetCore" Version="6.0.7" />
+	  <PackageReference Include="NetDevPack.Security.Jwt.Core" Version="6.0.7" />
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Equinox.Application\Equinox.Application.csproj" />
+	  <ProjectReference Include="..\Equinox.Infra.CrossCutting.Identity\Equinox.Infra.CrossCutting.Identity.csproj" />
+	  <ProjectReference Include="..\Equinox.Infra.CrossCutting.IoC\Equinox.Infra.CrossCutting.IoC.csproj" />
+	  <ProjectReference Include="..\Equinox.Infra.Data\Equinox.Infra.Data.csproj" />
+	</ItemGroup>
+</Project>
